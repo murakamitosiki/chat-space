@@ -5,28 +5,27 @@
 |name|string|null:false,unique true|
 |email|string|null:folse,unique true|
 ### Association
-has_many : group_teble,through: :groups_users
-has_many: message
-has_many: group
-
+has_many : groups,through: :groups_users
+has_many: messages
 
 ## groups
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique true|
-|member|string|null: false, unique true|
 ### Association
-has_many : users_teble, through: :groups_users
-has_many :message
-has_many:users
+has_many : users, through: :groups_users
+has_many :messages
+
 
 ## messages
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
 |chat|text||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
-belongs_to :users
+belongs_to :user
 belongs_to :group
 
 
@@ -37,7 +36,7 @@ belongs_to :group
 |group_id|integer|null:false,foreign_key: true|
 |user_id|integer|null:false,foreign_key: true|
 ### Association
-belongs_to :users
+belongs_to :user
 belongs_to :group
 
 
