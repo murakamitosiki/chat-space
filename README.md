@@ -5,9 +5,9 @@
 |name|string|null:false,unique true|
 |email|string|null:folse,unique true|
 ### Association
-has_many : group_teble,through: :group_users_teble
-has_many: message_table
-has_many: group_teble
+has_many : group_teble,through: :groups_users
+has_many: message
+has_many: group
 
 
 ## groups
@@ -16,9 +16,9 @@ has_many: group_teble
 |name|string|null: false, unique true|
 |member|string|null: false, unique true|
 ### Association
-has_many : users_teble, through: :group_users_teble
-has_many :message_table
-has_many:users_teble
+has_many : users_teble, through: :groups_users
+has_many :message
+has_many:users
 
 ## messages
 |Column|Type|Options|
@@ -26,8 +26,8 @@ has_many:users_teble
 |image|text||
 |chat|text||
 ### Association
-belongs_to :users_teble
-belongs_to :group_teble
+belongs_to :users
+belongs_to :group
 
 
 
@@ -37,8 +37,8 @@ belongs_to :group_teble
 |group_id|integer|null:false,foreign_key: true|
 |user_id|integer|null:false,foreign_key: true|
 ### Association
-belongs_to :users_teble
-belongs_to :group_teble
+belongs_to :users
+belongs_to :group
 
 
 
