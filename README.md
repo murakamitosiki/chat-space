@@ -23,7 +23,7 @@ has_many:users_teble
 ## message_table
 |Column|Type|Options|
 |------|----|-------|
-|Photo|text||
+|image|text||
 |chat|text||
 ### Association
 belongs_to :users_teble
