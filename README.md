@@ -1,4 +1,4 @@
-## users_teble
+## users
 |Column|Type|Options|
 |------|----|-------|
 |password|string|null: false, unique true|  　　　　　　　　　　　　　　#integer(数字),string(文字)
@@ -10,7 +10,7 @@ has_many: message_table
 has_many: group_teble
 
 
-## group_teble
+## groups
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique true|
@@ -20,7 +20,7 @@ has_many : users_teble, through: :group_users_teble
 has_many :message_table
 has_many:users_teble
 
-## message_table
+## messages
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
@@ -31,7 +31,7 @@ belongs_to :group_teble
 
 
 
-## group_users_teble
+## groups_users
 |Column|Type|Options|
 |------|----|-------|
 |group_id|integer|null:false,foreign_key: true|
