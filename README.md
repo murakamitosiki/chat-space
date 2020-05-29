@@ -24,7 +24,7 @@ has_many:users_teble
 |Column|Type|Options|
 |------|----|-------|
 |Photo|text||
-|chat|text|null: false,|
+|chat|text||
 ### Association
 belongs_to :users_teble
 belongs_to :group_teble
