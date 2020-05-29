@@ -1,7 +1,6 @@
 ## users_teble
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true| 
 |password|string|null: false, unique true|  　　　　　　　　　　　　　　#integer(数字),string(文字)
 |name|string|null:false,unique true|
 |email|string|null:folse,unique true|
@@ -14,8 +13,8 @@ has_many: group_teble
 ## group_teble
 |Column|Type|Options|
 |------|----|-------|
-|group.name|string|null: false, unique true|
-|chat.member|string|null: false, unique true|
+|name|string|null: false, unique true|
+|member|string|null: false, unique true|
 ### Association
 has_many : users_teble, through: :group_users_teble
 has_many :message_table
@@ -25,7 +24,7 @@ has_many:users_teble
 |Column|Type|Options|
 |------|----|-------|
 |Photo|text||
-|chat|string|null: false,|
+|chat|text|null: false,|
 ### Association
 belongs_to :users_teble
 belongs_to :group_teble
