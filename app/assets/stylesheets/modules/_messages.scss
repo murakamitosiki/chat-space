@@ -120,21 +120,10 @@
           text-align: center;
           color: #ffffff;
         }
-
       }
-
-
-
-
-
-
-
-
-
-
     } 
-
 }
+
 .side{
   background-color: #253141;
   width: 300px;
@@ -154,7 +143,7 @@
       left: 20px;
       display: flex;
       justify-content: space-between;
-    
+
       &__name{
         color: black;
         width: 120px;
@@ -164,34 +153,28 @@
         width: 60px;
         display: flex;
         
-        
         &__pencil{
           color: #ffffff;
           margin-right: 5px;
-          
-
         }
+
         &__config{
-          color: #ffffff;
-         
+          color: #ffffff; 
         }
-
       }
     }
   }
-
 
   .bottom{
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 20px;
 
-  
     &__user{
       color: #ffffff;
       font-size: 15px;
-  
     }
+    
     &__message{
       color:#ffffff;
       margin-top: 5px;
