@@ -5,7 +5,7 @@
         = current_user.name
       .top__user__icon
         .top__user__icon__pencil
-          =link_to do
+          =link_to new_group_path do
             =icon('fa', 'edit')
         .top__user__icon__config
           =link_to edit_user_path(current_user)do
@@ -13,8 +13,11 @@
       
       
   .bottom
-    .bottom__user
-      a
-    .bottom__message
-      まだメッセージがありません
+    - current_user.groups.each do |group|
+      = link_to '#' do
+        .bottom__user
+          = group.name
+        .bottom__message
+          まだメッセージがありません
 
+    
