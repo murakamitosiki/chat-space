@@ -55,3 +55,6 @@ gem 'haml-rails'
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'pry-rails'
+gem 'carrierwave'#画像投稿
+gem 'mini_magick'#画像のサイズ変更
+
