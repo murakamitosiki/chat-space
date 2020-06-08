@@ -2,32 +2,37 @@
   .main__top
     .main__top__user
       .main__top__user__name
-        a
+        =@group.name
       .main__top__user__member
-        member
+        - @group.users.each do |user|
+          = user.name
     .main__top__edit
-      edit
+      =link_to edit_group_path(@group)do
+        edit
   
   .main__center
-    .main__center__message
-      .main__center__message__info
-        .main__center__message__info__user
-          name
-        .main__center__message__info__date
-          2020/05/31
-      .main__center__message__text
-        message
+    .messages
+      = render @messages
 
   .main__bottom
-    .main__bottom__text
-      .main__bottom__text__info
-        .main__bottom__text__info__message
-          aaa
-        .main__bottom__text__info__photo
-          %label{class: "input-box__image"}
-            = icon('fas', 'image')
-            %input.hidden{type: "file"}
-            
-      .main__bottom__text__send
-        
-        send
+    = form_for [@group, @message] do |f|        #フォームを作る所
+      .main__bottom__text
+        .main__bottom__text__info
+          = f.text_field :chat, class: 'main__bottom__text__info__message', placeholder: 'type a message'#message入力する所
+          = f.label :image, class: 'main__bottom__text__info__photo' do
+            = icon('fas', 'image', class: 'main__bottom__text__info__photo__icon')#アイコンを作る
+            = f.file_field :image, class: 'hidden'#写真を選択する所
+        = f.submit 'Send', class: 'main__bottom__text__send'#送信
+
+
+-# .message
+-# .upper-message
+-#   .upper-message__user-name
+-#     = message.user.name
+-#   .upper-message__date
+-#     = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+-# .lower-message
+-#   - if message.content.present?
+-#     %p.lower-message__content
+-#       = message.content
+-#   = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
