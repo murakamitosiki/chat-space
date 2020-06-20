@@ -2,12 +2,12 @@
   .main__top
     .main__top__user
       .main__top__user__name
-        =@group.name
+        =@group.name #@groupの名前を表示するようにする
       .main__top__user__member
-        - @group.users.each do |user|
+        - @group.users.each do |user| #each文を用いて全員のusername情報を取得している
           = user.name
     .main__top__edit
-      =link_to edit_group_path(@group)do
+      =link_to edit_group_path(@group)do 
         edit
   
   .main__center

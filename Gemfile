@@ -57,4 +57,8 @@ gem 'devise'
 gem 'pry-rails'
 gem 'carrierwave'#画像投稿
 gem 'mini_magick'#画像のサイズ変更
+gem 'rspec-rails', '~> 3.5'
+gem 'rails-controller-testing'
+gem 'factory_bot_rails'
+gem 'faker'
 
