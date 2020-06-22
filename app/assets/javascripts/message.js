@@ -66,7 +66,6 @@ $('#new_message').on('submit', function(e){
     var last_message_id = $('.main__center__message:last').data("message-id");
     // 上で定義した5行目から20行目までを.main__center__message:lastでこここで使う
     // ("message-id")で前にきていたお客さんのメニューを知りたい
-    console.log(last_message_id)
     $.ajax({//厨房の誰かを指定してあげて渡す
       //ルーティングで設定した通りのURLを指定
       url: "api/messages",
