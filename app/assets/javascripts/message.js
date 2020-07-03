@@ -57,9 +57,12 @@ $('#new_message').on('submit', function(e){
     $('.main__center').animate({ scrollTop: $('.main__center')[0].scrollHeight});
     $('form')[0].reset();
   })
+  .fail(function() {
+    alert('error');
+  })
   .always(function(){
     $('.main__bottom__text__send').prop('disabled', false);//連続でボタンをおす記述
-  })
+  });
 
   var reloadMessages = function() {//非同期通信で使っていた物を利用して自動更新機能もつくる
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得 ノードの一番最後にくる文

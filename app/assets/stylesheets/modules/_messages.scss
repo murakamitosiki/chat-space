@@ -128,6 +128,7 @@
     } 
 }
 .side{
+  text-decoration: none;
   background-color: #253141;
   width: 300px;
   .top{
@@ -173,20 +174,24 @@
   }
 
   .bottom{
-  height: calc(100vh - 100px);
-  background-color: #2f3e51;
-  padding: 20px;
-
-    &__user{
-      color: #ffffff;
-      font-size: 15px;
-    }
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px;
+    a{
+      text-decoration: none;
+  
+      .bottom__user{
+        color: #ffffff;
+        font-size: 15px;
+        border: none;
+      }
     
-    &__message{
-      color:#ffffff;
-      margin-top: 5px;
-      margin-bottom: 40px;
-      font-size: 11px;
+      .bottom__message{
+        color:#ffffff;
+        margin-top: 5px;
+        margin-bottom: 40px;
+        font-size: 11px;
+      }
     }
   }
 }
