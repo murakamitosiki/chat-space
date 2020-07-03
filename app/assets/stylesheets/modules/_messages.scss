@@ -19,6 +19,7 @@
     justify-content: space-between;
     margin-right: 40px;
     margin-left: 40px;
+    border-bottom: solid 1px #eeeeee;
       &__user{
         
           &__name{
@@ -64,6 +65,7 @@
         &__user{
           color: #333333;
           font-size: 16px;
+          // font-weight: bold;
           
         }
         &__date{
@@ -73,9 +75,9 @@
         }
       }
       &__text{
-        margin-bottom: 46px;
+        margin-bottom: 11px;
         color: #434A54;
-        font-size: 20px;
+        font-size: 14px;
       }
       
     }
@@ -137,6 +139,7 @@
    background-color: #253141;
    display: flex;
    position: relative;
+  // font-weight: bold;
     &__user{
 
       height: 20px;
